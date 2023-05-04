@@ -1,9 +1,18 @@
+/*
+ * @Description: 
+ * @Author: 唐健峰
+ * @Date: 2023-05-04 19:12:51
+ * @LastEditors: ${author}
+ * @LastEditTime: 2023-05-04 21:27:00
+ */
 package duringbug.cloud.socket;
 
 import duringbug.cloud.socket.Client.TCPClient;
 import duringbug.cloud.socket.Server.TCPServer;
+import duringbug.cloud.socket.Start.OpenClient;
 import java.io.IOException;
 import org.junit.jupiter.api.Test;
+
 
 
 
@@ -43,6 +52,14 @@ public class MyTest {
             e.printStackTrace();
         } finally {
             client.stopConnection();
+        }
+    }
+    @Test
+    public void ManyClientOpen(){
+        for(int i=0;i<1;i++)
+        {
+            OpenClient openClient=new OpenClient(9091);
+            openClient.start();
         }
     }
 }
