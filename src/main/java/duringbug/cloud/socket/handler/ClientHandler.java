@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: 唐健峰
+ * @Date: 2023-05-04 17:44:58
+ * @LastEditors: ${author}
+ * @LastEditTime: 2023-05-05 10:50:49
+ */
 package duringbug.cloud.socket.handler;
 
 import duringbug.cloud.socket.entity.User;
